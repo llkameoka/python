@@ -1,15 +1,13 @@
-def triangulo(a, b, c):
-    if a < b + c and b < a + c and c < a + b:
-        print('As retas {}, {} e {} formam um triangulo'.format(a, b, c))
-        if a == b and a == c and b == c:
-            print('As retas {}, {} e {} formam um triangulo equilatero'.format(a, b, c))
-        elif a == b or a == c or b == c:
-            print('As retas {}, {} e {} formam um triângulo isósceles'.format(a, b, c))
+def triangulo(r1, r2, r3):
+    if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+        if r1 == r2 == r3:
+            print('As retas podem formar um triangulo equilátero')
+        elif r1 != r2 != r3 != r1:        
+            print('As retas podem formar um triangulo escaleno')
         else:
-            print('As retas {}, {} e {} formam um triângulo escaleno'.format(a, b, c))
+            print('As retas podem formar um triangulo isósceles')
     else:
-        print('As retas não forma um triangulo')
-
+        print('As retas não podem formar um triangulo')
 
 a = int(input('Digite o valor da reta 1: '))
 b = int(input('Digite o valor da reta 2: '))
